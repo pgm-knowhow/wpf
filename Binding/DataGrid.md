@@ -24,4 +24,4 @@ public ObservableCollection<Row> DataGrid1 { get; } = new ObservableCollection<R
     new Row() { Row1 = 2, Row2 = "def" }
 };
 ```
-Labelは表示だけで入力がないので set; は不要
+DataGridは表示だけで入力がないので set; は不要（入力はDataGrid上のDataGridRowやDataGridCellが対象）
