@@ -6,5 +6,5 @@
 ```public string BindingSample { get; set; } = "ハローワールド！";``` を追加<br/>
 4. MainWindow.xamlに追加したLabelを修正<br/>```<Label Content="Hello World!"/>```<br/>↓<br/>```<Label Content="{Binding BindingSample}"/>```<br/>
 5. MainWindow.xaml上でコンテキストメニュー＞コードの表示を選択<br/>
-6. コンストラクタの末尾に```this.DataContext = newMainViewModel();}```を追加<br/>
+6. コンストラクタの末尾に```this.DataContext = newMainViewModel();```を追加<br/>
 7. デバッグ実行してウインドウに"ハローワールド！"と表示されれば成功
