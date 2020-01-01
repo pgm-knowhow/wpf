@@ -1,0 +1,4 @@
+# ラベルの追加
+
+1. Project.mdで作ったプロジェクトのMainWindow.xamlを開いて、```<Grid>〜</Grid>``` の間に```
+<Label Content="Hello world!"/>``` を追加<br/>

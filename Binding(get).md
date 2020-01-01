@@ -1,0 +1,10 @@
+# Binding（表示）の実装
+
+1. ソリューションエクスプローラーでプロジェクト名の階層を選択してコンテキストメニュー＞追加＞クラスを選択<br/>
+2. 名前に作成するクラス名を入力して追加ボタンを押下（ここではMainViewModel.csに設定）<br/>
+3. 生成されたクラスの```class MainViewModewl{```〜```}```の間にプロパティ
+```public string BindingSample { get; set; } = "ハローワールド！";``` を追加<br/>
+4. MainWindow.xamlに追加したLabelを修正<br/>```<Label Content="Hello World!"/><br/>```<br/>↓<br/>```<Label Content="{Binding BindingSample}"/>```<br/>
+5. MainWindow.xaml上でコンテキストメニュー＞コードの表示を選択<br/>
+6. コンストラクタの末尾に```this.DataContext = newMainViewModel();}```を追加<br/>
+7. デバッグ実行してウインドウに"ハローワールド！"と表示されれば成功
