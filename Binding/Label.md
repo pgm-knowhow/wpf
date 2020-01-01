@@ -5,6 +5,12 @@
 <Label Content="{Binding Label1}">
 ```
 
+- Xaml.cs
+コンストラクタの中等
+```
+this.DataContext = <ViewModelのインスタンス>
+```
+
 - ViewModel
 ```
 public string Label1 { get; } = "ラベル";

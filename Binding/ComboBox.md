@@ -7,6 +7,12 @@
 <ComboBox ItemsSource="{Binding ComboBox1}" SelectedIndex="{Binding SelectedIndex1}"/>
 ```
 
+- Xaml.cs
+コンストラクタの中等
+```
+this.DataContext = <ViewModelのインスタンス>
+```
+
 - ViewModel
 ```
 public ObservableCollection<int> ComboBox1 { get; set; } = new ObservableCollection<int>() { 1, 2 };
