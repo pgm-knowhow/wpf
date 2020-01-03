@@ -1,7 +1,9 @@
 # ObservableCollectionの更新
 
-ObservableCollectionはメインスレッド（UIスレッド）以外から操作しようとすると例外になってしまう
-その場合以下のように実装する
+- ObservableCollectionに要素をAdd/DeleteするとINotifyPropertyChangedを使わなくても画面に反映される
+- その代わりObservableCollectionはメインスレッド（UIスレッド）以外のスレッドから操作しようとすると例外になってしまう
+- 以下のように実装することでメインスレッド以外のスレッド
+からObservableCollectionを操作できる
 ```
 Application.Current.Dispatcher.BeginInvoke(
     DispatcherPriority.Normal,
