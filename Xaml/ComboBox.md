@@ -1,4 +1,4 @@
-# xaml(ComboBox)の実装
+# Xaml(ComboBox)の実装
 
 ```
 <ComboBox>

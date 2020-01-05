@@ -1,4 +1,4 @@
-# xaml(TextBox)の実装
+# Xaml(TextBox)の実装
 
 ```
 <TextBox Text="テキスト"/>

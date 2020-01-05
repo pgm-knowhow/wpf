@@ -1,4 +1,4 @@
-# Buttonの実装
+# Xaml(Button)の実装
 
 ## 標準的なボタン
 

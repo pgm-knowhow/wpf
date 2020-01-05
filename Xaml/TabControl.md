@@ -1,4 +1,4 @@
-# TabControlの実装
+# Xaml(TabControl)の実装
 
 ## Xaml
 

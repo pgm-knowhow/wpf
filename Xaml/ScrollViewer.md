@@ -1,4 +1,4 @@
-# ScrollViewerの実装
+# Xaml(ScrollViewer)の実装
 
 ```
 <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
