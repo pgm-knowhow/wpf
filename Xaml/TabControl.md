@@ -1,5 +1,7 @@
 # TabControlの実装
 
+## Xaml
+
 ```
 <TabControl>
     <TabItem Header="タブ１">
@@ -35,4 +37,11 @@
         </Grid>
     </TabItem>
 </TabControl>
+```
+
+## Xaml.cs
+
+- コードビハインドからTabItemを追加する
+```
+this.TabControl.Items.Add( new TabItem() { Header = "タブ１", Content = <UserControlインスタンス等> } );
 ```
