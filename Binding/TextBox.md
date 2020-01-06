@@ -1,4 +1,4 @@
-# Binding(TextBox))の実装
+# Binding(TextBox)の実装
 
 - Xaml
 ```

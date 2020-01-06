@@ -1,4 +1,4 @@
-# TabControlの実装
+# Binding(TabControl)の実装
 
 ## Xaml
 ```
