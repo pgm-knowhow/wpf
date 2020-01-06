@@ -4,6 +4,8 @@ CheckBoxの代替としてのToggleButton
 - テキスト非依存のOn/Off表現
 - IsEnabled="False"時の非活性表示
 
+![ToggleButton.jpg](./ToggleButton.jpg)
+
 ## Xaml
 ```
 <UserControl x:Class="Common.usercontrol.src.ToggleButton"

@@ -1,5 +1,7 @@
 # Windowのタイトルバーにヘルプアイコンを実装する
 
+![TitleBarHelpIcon.jpg](./TitleBarHelpIcon.jpg)
+
 以下のコードをWindowのXaml.csに実装する
 ```
 public partial class MainWindow : Window

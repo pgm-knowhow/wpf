@@ -1,5 +1,7 @@
 # NumericUpDownを実装する
 
+![NumericUpDown.jpg](./NumericUpDown.jpg)
+
 - WPFは標準でNumericUpDownコントロールを提供しないため独自に実装した実装例を示す
 
 ## Xaml
