@@ -1,9 +1,8 @@
 # ToggleButtonを実装する
 
-ToggleButtonはCheckBoxの代替として用意した
+CheckBoxの代替としてのToggleButton
 - テキスト非依存のOn/Off表現
-- Binding対応
-- IsEnabled="False"時の非活性表示対応
+- IsEnabled="False"時の非活性表示
 
 ## Xaml
 ```
