@@ -1,4 +1,4 @@
-# ObservableCollectionの更新
+# Tips(ObservableCollection)
 
 - ObservableCollectionに要素をAdd/DeleteするとINotifyPropertyChangedを使わなくても画面に反映される
 - その代わりObservableCollectionはメインスレッド（UIスレッド）以外のスレッドから操作しようとすると例外になってしまう

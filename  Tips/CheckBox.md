@@ -1,4 +1,4 @@
-# CheckBox関連のTips
+# Tips(CheckBox)
 
 ## CheckBoxにint型のプロパティをBindする
 

@@ -1,4 +1,4 @@
-# Label関連のTips
+# Tips(Label)
 
 - LabelのContentに代入する文字列に"_"を使うと勝手に右隣の文字のアンダースコアとして表示される<br/>
 　（Labelが"_"をAltショートカットに自動変換する）
