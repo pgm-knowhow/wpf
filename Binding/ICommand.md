@@ -1,4 +1,4 @@
-# ICommandの実装
+# Binding(ICommand)の実装
 
 - ICommandはButtonコントロール、ContextMenuのBinding先として実装する
 - ICommandの実装例は下記のとおり
