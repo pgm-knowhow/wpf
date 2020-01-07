@@ -22,13 +22,11 @@ ICommandの実装例は下記のとおり
 			/// </summary>
 			readonly Func<bool> _canExecute;
 
-
 			/// <summary>
 			/// コンストラクタ
 			/// </summary>
 			/// <param name="execute">コマンドの実体</param>
 			public RelayCommand( Action execute ) : this( execute, null ) { }
-
 
 			/// <summary>
 			/// コンストラクタ
@@ -44,7 +42,6 @@ ICommandの実装例は下記のとおり
 				this._canExecute = canExecute;
 			}
 
-
 			/// <summary>
 			/// ICommandのCanExecuteの実装です
 			/// 現在の状態でこのコマンドを実行できるかどうかを判断するメソッドを定義します
@@ -54,7 +51,6 @@ ICommandの実装例は下記のとおり
 			public bool CanExecute( Object parameter ) {
 				return _canExecute == null || _canExecute();
 			}
-
 
 			/// <summary>
 			/// ICommandのCanExecuteChangedイベントハンドラの実装です
@@ -69,7 +65,6 @@ ICommandの実装例は下記のとおり
 				}
 			}
 
-
 			/// <summary>
 			/// CanExecuteChanged イベントを発行します
 			/// 同じView（ViewModel）のすべてのコマンドに対して再評価がおこなわれるため
@@ -79,7 +74,6 @@ ICommandの実装例は下記のとおり
 				CommandManager.InvalidateRequerySuggested();
 			}
 
-
 			/// <summary>
 			/// ICommandのExecuteの実装です
 			/// コマンドの起動時に呼び出されるメソッドを定義します
@@ -88,10 +82,7 @@ ICommandの実装例は下記のとおり
 			public void Execute( Object parameter ) {
 				_execute();
 			}
-
-
 		}
-
 
 		/// <summary>
 		/// ICommandの実装（ジェネリクス対応版）
@@ -109,13 +100,11 @@ ICommandの実装例は下記のとおり
 			/// </summary>
 			readonly Predicate<T> _canExecute;
 
-
 			/// <summary>
 			/// コンストラクタ
 			/// </summary>
 			/// <param name="execute">コマンドの実体</param>
 			public RelayCommand( Action<T> execute ) : this( execute, null ) { }
-
 
 			/// <summary>
 			/// コンストラクタ
@@ -130,7 +119,6 @@ ICommandの実装例は下記のとおり
 				this._canExecute = canExecute;
 			}
 
-
 			/// <summary>
 			/// ICommandのCanExecuteの実装です
 			/// 現在の状態でこのコマンドを実行できるかどうかを判断するメソッドを定義します
@@ -140,7 +128,6 @@ ICommandの実装例は下記のとおり
 			public bool CanExecute( Object parameter ) {
 				return this._canExecute == null || this._canExecute( ( T ) parameter );
 			}
-
 
 			/// <summary>
 			/// ICommandのCanExecuteChangedイベントハンドラの実装です
@@ -155,7 +142,6 @@ ICommandの実装例は下記のとおり
 				}
 			}
 
-
 			/// <summary>
 			/// CanExecuteChanged イベントを発行します
 			/// 同じView（ViewModel）のすべてのコマンドに対して再評価がおこなわれるため
@@ -165,7 +151,6 @@ ICommandの実装例は下記のとおり
 				CommandManager.InvalidateRequerySuggested();
 			}
 
-
 			/// <summary>
 			/// ICommandのExecuteの実装です
 			/// コマンドの起動時に呼び出されるメソッドを定義します
@@ -174,7 +159,6 @@ ICommandの実装例は下記のとおり
 			public void Execute( Object parameter ) {
 				_execute( ( T ) parameter );
 			}
-
 
 		}
 	}
