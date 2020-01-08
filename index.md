@@ -21,7 +21,7 @@
 4. [ComboBox](./Binding/ComboBox.md)
 5. [DataGrid](./Binding/DataGrid.md)
 6. [TabControl](./Binding/TabControl.md)
-7. [ICommand](./Binding/ICommand.md)
+7. [ICommand (Button／ContextMenu)](./Binding/ICommand.md)
 #### オリジナル・コントロール
 1. [NumericUpDown](./OriginalControl/NumericUpDown/NumericUpDown.md)
 2. [ToggleButton](./OriginalControl/ToggleButton/ToggleButton.md)
