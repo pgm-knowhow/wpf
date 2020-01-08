@@ -412,6 +412,8 @@ namespace Common.usercontrol.src
 
 - ViewModel
 ```
-public ObservableCollection<int> NumericUpDown1 { get; set; } = new ObservableCollection<int>() { 0, 1 };
-public int SelectedValue { get; set; } = 0;
+public ObservableCollection<string> NumericUpDown1 { get; set; } = new ObservableCollection<string>() { "0", "1" };
+public string SelectedValue { get; set; } = "0";
 ```
+- 保持する型がint型ではなくstring型であることに注意
+（0と空欄を表現できるようにするため）
