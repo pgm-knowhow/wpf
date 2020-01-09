@@ -5,9 +5,9 @@
 
 - Xaml
 ```
-<Button Content="Addボタン" Command="{Binding AddCommand">
+<Button Name="AddBtn" Content="Addボタン" Command="{Binding AddCommand">
 ```
-（Bindingについては "ICommandの実装" の項を参照）
+（Bindingについては [Binding(ICommand)の実装](../Binding/ICommand.md) の項を参照）
 
 ## 応用（ハンバーガーボタン）
 見た目を四角でなく円形にして、ボタン押下時にContextMenuを呼び出す
