@@ -64,84 +64,89 @@
 
 - Triggerを使った実装例
     - Xaml
+
     ```
-    <DataGridTemplateColumn Header="TextBox">
-        <DataGridTemplateColumn.CellStyle>
-            <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource {x:Type DataGridCell}}">
-                <Style.Triggers>
-                    <MultiTrigger>
-                        <MultiTrigger.Conditions>
-                            <Condition Property="IsKeyboardFocusWithin" Value="True"/>
-                        </MultiTrigger.Conditions>
-                        <Setter Property="IsEditing" Value="True"/>
-                    </MultiTrigger>
-                </Style.Triggers>
-            </Style>
-        </DataGridTemplateColumn.CellStyle>
-        <DataGridTemplateColumn.CellTemplate>
-            <DataTemplate>
-                <TextBlock Text="{Binding ComboBoxColumn}"/>
-            </DataTemplate>
-        </DataGridTemplateColumn.CellTemplate>
-        <DataGridTemplateColumn.CellEditingTemplate>
-            <DataTemplate>
-                <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"
-                          Loaded="ComboBox_Loaded"/>
-            </DataTemplate>
-        </DataGridTemplateColumn.CellEditingTemplate>
-    </DataGridTemplateColumn>
+        <DataGridTemplateColumn Header="TextBox">
+            <DataGridTemplateColumn.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                    <Style.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsKeyboardFocusWithin" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="IsEditing" Value="True"/>
+                        </MultiTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGridTemplateColumn.CellStyle>
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding ComboBoxColumn}"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+            <DataGridTemplateColumn.CellEditingTemplate>
+                <DataTemplate>
+                    <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"
+                                Loaded="ComboBox_Loaded"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellEditingTemplate>
+        </DataGridTemplateColumn>
     ```
+
     - Xaml.cs
+
     ```
-    private void ComboBox_Loaded( object sender, RoutedEventArgs e )
-    {
-        if( sender is ComboBox cb )
+        private void ComboBox_Loaded( object sender, RoutedEventArgs e )
         {
-            Keyboard.Focus( cb );
+            if( sender is ComboBox cb )
+            {
+                Keyboard.Focus( cb );
+            }
         }
-    }
     ```
 
 - Eventを使った実装例
     - Xaml
+
     ```
-    <DataGridTemplateColumn Header="ComboBox">
-        <DataGridTemplateColumn.CellStyle>
-            <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource {x:Type DataGridCell}}">
-                <EventSetter Event="PreviewMouseLeftButtonUp" Handler="DataGridCell_PreviewMouseLeftButtonUp"/>
-            </Style>
-        </DataGridTemplateColumn.CellStyle>
-        <DataGridTemplateColumn.CellTemplate>
-            <DataTemplate>
-                <TextBlock Text="{Binding ComboBoxColumn}"/>
-            </DataTemplate>
-        </DataGridTemplateColumn.CellTemplate>
-        <DataGridTemplateColumn.CellEditingTemplate>
-            <DataTemplate>
-                <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"
-                          Loaded="ComboBox_Loaded"/>
-            </DataTemplate>
-        </DataGridTemplateColumn.CellEditingTemplate>
-    </DataGridTemplateColumn>
+        <DataGridTemplateColumn Header="ComboBox">
+            <DataGridTemplateColumn.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource {x:Type DataGridCell}}">
+                    <EventSetter Event="PreviewMouseLeftButtonUp" Handler="DataGridCell_PreviewMouseLeftButtonUp"/>
+                </Style>
+            </DataGridTemplateColumn.CellStyle>
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding ComboBoxColumn}"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+            <DataGridTemplateColumn.CellEditingTemplate>
+                <DataTemplate>
+                    <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"
+                            Loaded="ComboBox_Loaded"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellEditingTemplate>
+        </DataGridTemplateColumn>
     ```   
 
     - Xaml.cs
-    ```
-    private void DataGridCell_PreviewMouseLeftButtonUp( object sender, MouseButtonEventArgs e )
-    {
-        if( sender is DataGridCell cell )
-        {
-            cell.IsEditing = true;
-        }
-    }
 
-    private void ComboBox_Loaded( object sender, RoutedEventArgs e )
-    {
-        if( sender is ComboBox cb )
+    ```
+        private void DataGridCell_PreviewMouseLeftButtonUp( object sender, MouseButtonEventArgs e )
         {
-            Keyboard.Focus( cb );
+            if( sender is DataGridCell cell )
+            {
+                cell.IsEditing = true;
+            }
         }
-    }
+
+        private void ComboBox_Loaded( object sender, RoutedEventArgs e )
+        {
+            if( sender is ComboBox cb )
+            {
+                Keyboard.Focus( cb );
+            }
+        }
     ```
 
 （Bindingについては [Binding(DataGrid)の実装](../Binding/DataGrid.md) の項を参照）
