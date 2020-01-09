@@ -2,6 +2,7 @@
 # Xaml(DataGrid)の実装
 
 #### 基本
+![DataGrid1.jpg](./DataGrid1.jpg)
 ```
 <DataGrid ItemsSource="{Binding DataGrid1}">
 ```
@@ -10,14 +11,16 @@
 
 
 #### 列毎に表示するコントロールを制御する
+![DataGrid2.jpg](./DataGrid2.jpg)
+- 列ヘッダに表示する文字を指定する
+- 各セルに表示するコントロールを指定する
 ```
 <Window.Resources>
     <CollectionViewSource x:Key="ComboBox1" Source="{Binding ComboBox1}"/>
 </Window.Resources>
 
 <DataGrid ItemsSource="{Binding DataGrid1}" 
-            AutoGenerateColumns="False" CanUserAddRows="False"
-            VerticalAlignment="Top" HorizontalAlignment="Left">
+        　AutoGenerateColumns="False" CanUserAddRows="False">
 
     <DataGrid.Columns>
 
