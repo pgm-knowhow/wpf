@@ -2,19 +2,19 @@
 # Binding(DataGrid)の実装
 
 - Xaml
-    （Xamlについては [Xaml(DataGrid)の実装](../Xaml/DataGrid.md) の項を参照）
+    - （Xamlについては [Xaml(DataGrid)の実装](../Xaml/DataGrid.md) の項を参照）
 <br/>
 
 - Xaml.cs
 
-    コンストラクタの中等
+    - コンストラクタの中等
     ```
     this.DataContext = <ViewModelのインスタンス>
     ```
 
 - Row.cs
 
-    DataGridの行の各セルの情報を保持するクラスを作成
+    - DataGridの行の各セルの情報を保持するクラスを作成
     ```
     using System.Linq;　/* FirstOrDefault()関数を使うために記述 */
 
