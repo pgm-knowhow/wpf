@@ -8,6 +8,7 @@
 - Xaml.cs
 
     - コンストラクタの中等
+    
     ```
     this.DataContext = <ViewModelのインスタンス>
     ```
@@ -15,6 +16,7 @@
 - Row.cs
 
     - DataGridの行の各セルの情報を保持するクラスを作成
+
     ```
     using System.Linq;　/* FirstOrDefault()関数を使うために記述 */
 
