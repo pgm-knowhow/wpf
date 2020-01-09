@@ -14,8 +14,10 @@
 
 - Row.cs
 
-    DataGridの行の各セルの情報を保持するクラスを作成する
+    DataGridの行の各セルの情報を保持するクラスを作成
     ```
+    using System.Linq;　/* FirstOrDefault()関数を使うために記述 */
+
     public class Row 
     {
         public int LabelColumn { get; set; } = 0;
@@ -26,7 +28,12 @@
     } 
     ```
 
+
 - ViewModel.cs
+
+    - ComboBox1に "Item.1"～"Item.3"を設定
+    - DataGridには先頭セルに1～99を設定した行を99行設定
+
     ```
     public ObservableCollection<Row> DataGrid1 { get; } = new ObservableCollection<Row>();
     public static ObservableCollection<string> ComboBox1 { get; } = new ObservableCollection<string>()
