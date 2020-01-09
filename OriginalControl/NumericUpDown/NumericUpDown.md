@@ -407,14 +407,14 @@ namespace Common.usercontrol.src
 ## 使用例
 
 - Xaml
-    ```
+```
     <NumericUpDown ItemsSource="{Binding NumericUpDown1}" Text="{Binding SelectedValue}">
-    ```
+```
 
 - ViewModel
-    ```
+```
     public ObservableCollection<string> NumericUpDown1 { get; set; } = new ObservableCollection<string>() { "0", "1" };
     public string SelectedValue { get; set; } = "0";
-    ```
+```
 - 保持する型がint型ではなくstring型であることに注意
 （0と空欄を表現できるようにするため）
