@@ -6,33 +6,27 @@
 <br/>
 
 - Xaml.cs
-
     - コンストラクタの中等
-    
     ```
-    this.DataContext = <ViewModelのインスタンス>
+        this.DataContext = <ViewModelのインスタンス>
     ```
 
 - Row.cs
-
     - DataGridの行の各セルの情報を保持するクラスを作成
-
     ```
-    using System.Linq;　/* FirstOrDefault()関数を使うために記述 */
+        using System.Linq;　/* FirstOrDefault()関数を使うために記述 */
 
-    public class Row 
-    {
-        public int LabelColumn { get; set; } = 0;
-        public string TextBlockColumn { get; set; } = "TextBlock";
-        public string TextBoxColumn { get; set; } = "TextBox";
-        public bool CheckBoxColumn { get; set; } = false;
-        public string ComboBoxColumn { get; set; } = ViewModel.ComboBox1.FirstOrDefault();
-    } 
+        public class Row 
+        {
+            public int LabelColumn { get; set; } = 0;
+            public string TextBlockColumn { get; set; } = "TextBlock";
+            public string TextBoxColumn { get; set; } = "TextBox";
+            public bool CheckBoxColumn { get; set; } = false;
+            public string ComboBoxColumn { get; set; } = ViewModel.ComboBox1.FirstOrDefault();
+        } 
     ```
-
 
 - ViewModel.cs
-
     - ComboBox1に "Item.1"～"Item.3"を設定
     - DataGridには先頭セルに1～99を設定した行を99行設定
 
