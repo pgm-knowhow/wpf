@@ -49,11 +49,7 @@
             <DataGridTemplateColumn Header="ComboBox">
                 <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
-                        <ComboBox SelectedIndex="{Binding ComboBoxColumn}">
-                            <ComboBoxItem Content="Item.1"/>
-                            <ComboBoxItem Content="Item.2"/>
-                            <ComboBoxItem Content="Item.3"/>
-                        </ComboBox>
+                        <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"/>
                     </DataTemplate>
                 </DataGridTemplateColumn.CellTemplate>
             </DataGridTemplateColumn>
@@ -64,7 +60,7 @@
     ```
 
 #### セルのコントロールを、表示時と編集時で切替えて表示する
-選択中のセル以外は軽量なコントロールを表示しておくことで DataGrid 全体の表示速度を改善する
+選択中のセル以外は軽量なコントロール(TextBlock等)を表示して、重いコントロール(ComboBox等)は必要な時に読み込むことで、DataGridの読込速度を改善する
 
 - Triggerを使った実装例
     - Xaml
@@ -84,23 +80,24 @@
         </DataGridTemplateColumn.CellStyle>
         <DataGridTemplateColumn.CellTemplate>
             <DataTemplate>
-                <TextBlock Text="{Binding TextBoxColumn}"/>
+                <TextBlock Text="{Binding ComboBoxColumn}"/>
             </DataTemplate>
         </DataGridTemplateColumn.CellTemplate>
         <DataGridTemplateColumn.CellEditingTemplate>
             <DataTemplate>
-                <TextBox Text="{Binding TextBoxColumn}" Loaded="TextBox_Loaded"/>
+                <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"
+                          Loaded="ComboBox_Loaded"/>
             </DataTemplate>
         </DataGridTemplateColumn.CellEditingTemplate>
     </DataGridTemplateColumn>
     ```
     - Xaml.cs
     ```
-    private void TextBox_Loaded( object sender, RoutedEventArgs e )
+    private void ComboBox_Loaded( object sender, RoutedEventArgs e )
     {
-        if( sender is TextBox tb )
+        if( sender is ComboBox cb )
         {
-            Keyboard.Focus( tb );
+            Keyboard.Focus( cb );
         }
     }
     ```
@@ -108,7 +105,7 @@
 - Eventを使った実装例
     - Xaml
     ```
-    <DataGridTemplateColumn Header="TextBox">
+    <DataGridTemplateColumn Header="ComboBox">
         <DataGridTemplateColumn.CellStyle>
             <Style TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource {x:Type DataGridCell}}">
                 <EventSetter Event="PreviewMouseLeftButtonUp" Handler="DataGridCell_PreviewMouseLeftButtonUp"/>
@@ -116,12 +113,13 @@
         </DataGridTemplateColumn.CellStyle>
         <DataGridTemplateColumn.CellTemplate>
             <DataTemplate>
-                <TextBlock Text="{Binding TextBoxColumn}"/>
+                <TextBlock Text="{Binding ComboBoxColumn}"/>
             </DataTemplate>
         </DataGridTemplateColumn.CellTemplate>
         <DataGridTemplateColumn.CellEditingTemplate>
             <DataTemplate>
-                <TextBox Text="{Binding TextBoxColumn}" Loaded="TextBox_Loaded"/>
+                <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"
+                          Loaded="ComboBox_Loaded"/>
             </DataTemplate>
         </DataGridTemplateColumn.CellEditingTemplate>
     </DataGridTemplateColumn>
@@ -137,11 +135,11 @@
         }
     }
 
-    private void TextBox_Loaded( object sender, RoutedEventArgs e )
+    private void ComboBox_Loaded( object sender, RoutedEventArgs e )
     {
-        if( sender is TextBox tb )
+        if( sender is ComboBox cb )
         {
-            Keyboard.Focus( tb );
+            Keyboard.Focus( cb );
         }
     }
     ```
