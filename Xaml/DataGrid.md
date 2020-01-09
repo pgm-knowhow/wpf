@@ -2,62 +2,62 @@
 # Xaml(DataGrid)の実装
 
 #### 基本
-    ```
-    <DataGrid ItemsSource="{Binding DataGrid1}">
-    ```
+```
+<DataGrid ItemsSource="{Binding DataGrid1}">
+```
 
 #### 列毎に異なるコントロールで表示する
-    ```
-    <DataGrid ItemsSource="{Binding DataGrid1}" 
-                AutoGenerateColumns="False" CanUserAddRows="False"
-                VerticalAlignment="Top" HorizontalAlignment="Left">
+```
+<DataGrid ItemsSource="{Binding DataGrid1}" 
+            AutoGenerateColumns="False" CanUserAddRows="False"
+            VerticalAlignment="Top" HorizontalAlignment="Left">
 
-        <DataGrid.Columns>
+    <DataGrid.Columns>
 
-            <DataGridTemplateColumn Header="Label">
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <Label Content="{Binding LabelColumn}"/>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
-            
-            <DataGridTemplateColumn Header="TextBlock">
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding TextBlockColumn}"/>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+        <DataGridTemplateColumn Header="Label">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding LabelColumn}"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        
+        <DataGridTemplateColumn Header="TextBlock">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding TextBlockColumn}"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="TextBox">
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <TextBox Text="{Binding TextBoxColumn}"/>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+        <DataGridTemplateColumn Header="TextBox">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <TextBox Text="{Binding TextBoxColumn}"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="CheckBox">
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <CheckBox IsChecked="{Binding CheckBoxColumn}"/>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+        <DataGridTemplateColumn Header="CheckBox">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <CheckBox IsChecked="{Binding CheckBoxColumn}"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
 
-            <DataGridTemplateColumn Header="ComboBox">
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"/>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+        <DataGridTemplateColumn Header="ComboBox">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
 
-        </DataGrid.Columns>
+    </DataGrid.Columns>
 
-    </DataGrid>
-    ```
+</DataGrid>
+```
 
 #### セルのコントロールを、表示時と編集時で切替えて表示する
 選択中のセル以外は軽量なコントロール(TextBlock等)を表示して、重いコントロール(ComboBox等)は必要な時に読み込むことで、DataGridの読込速度を改善する
