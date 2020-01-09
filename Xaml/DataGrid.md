@@ -12,8 +12,6 @@
 
 #### 列毎に表示するコントロールを制御する
 ![DataGrid2.jpg](./DataGrid2.jpg)
-- 列ヘッダに表示する文字を指定する
-- 各セルに表示するコントロールを指定する
 ```
 <Window.Resources>
     <CollectionViewSource x:Key="ComboBox1" Source="{Binding ComboBox1}"/>
@@ -69,6 +67,8 @@
 
 </DataGrid>
 ```
+- 列ヘッダに表示する文字を指定する
+- 各セルに表示するコントロールを指定する
 
 #### 表示するコントロールを、表示時と編集時で切替える
 選択中のセル以外は軽量なコントロール(TextBlock等)を表示して、重いコントロール(ComboBox等)はセルを選択した時に読み込むことで、DataGrid全体の読込速度を改善する
