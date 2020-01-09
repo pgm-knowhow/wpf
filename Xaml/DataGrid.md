@@ -5,9 +5,16 @@
 ```
 <DataGrid ItemsSource="{Binding DataGrid1}">
 ```
+- 列ヘッダには Bind したクラスのプロパティ名が表示される
+- 各セルは TextBox、プロパティが bool型の場合は CheckBox で表示される
 
-#### 列毎に異なるコントロールで表示する
+
+#### 列毎に表示するコントロールを制御する
 ```
+<Window.Resources>
+    <CollectionViewSource x:Key="ComboBox1" Source="{Binding ComboBox1}"/>
+</Window.Resources>
+
 <DataGrid ItemsSource="{Binding DataGrid1}" 
             AutoGenerateColumns="False" CanUserAddRows="False"
             VerticalAlignment="Top" HorizontalAlignment="Left">
@@ -49,7 +56,8 @@
         <DataGridTemplateColumn Header="ComboBox">
             <DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
-                    <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"/>
+                    <ComboBox ItemsSource="{Binding Source={StaticResource ComboBox1}}"
+                            　SelectedItem="{Binding ComboBoxColumn}"/>
                 </DataTemplate>
             </DataGridTemplateColumn.CellTemplate>
         </DataGridTemplateColumn>
@@ -59,8 +67,8 @@
 </DataGrid>
 ```
 
-#### セルのコントロールを、表示時と編集時で切替えて表示する
-選択中のセル以外は軽量なコントロール(TextBlock等)を表示して、重いコントロール(ComboBox等)は必要な時に読み込むことで、DataGridの読込速度を改善する
+#### 表示するコントロールを、表示時と編集時で切替える
+選択中のセル以外は軽量なコントロール(TextBlock等)を表示して、重いコントロール(ComboBox等)はセルを選択した時に読み込むことで、DataGrid全体の読込速度を改善する
 
 ##### Triggerを使った実装例
 - Xaml
@@ -85,8 +93,9 @@
         </DataGridTemplateColumn.CellTemplate>
         <DataGridTemplateColumn.CellEditingTemplate>
             <DataTemplate>
-                <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"
-                            Loaded="ComboBox_Loaded"/>
+                <ComboBox ItemsSource="{Binding Source={StaticResource ComboBox1}}"
+                        　SelectedItem="{Binding ComboBoxColumn}"
+                          Loaded="ComboBox_Loaded"/>
             </DataTemplate>
         </DataGridTemplateColumn.CellEditingTemplate>
     </DataGridTemplateColumn>
@@ -118,7 +127,8 @@
         </DataGridTemplateColumn.CellTemplate>
         <DataGridTemplateColumn.CellEditingTemplate>
             <DataTemplate>
-                <ComboBox ItemsSource="{Binding ComboBox1}" SelectedItem="{Binding ComboBoxColumn}"
+                <ComboBox ItemsSource="{Binding Source={StaticResource ComboBox1}}"
+                        　SelectedItem="{Binding ComboBoxColumn}"
                           Loaded="ComboBox_Loaded"/>
             </DataTemplate>
         </DataGridTemplateColumn.CellEditingTemplate>
