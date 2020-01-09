@@ -1,3 +1,4 @@
+[WPF開発ノウハウ集](../../index.md)
 # NumericUpDownを実装する
 
 ![NumericUpDown.jpg](./NumericUpDown.jpg)
