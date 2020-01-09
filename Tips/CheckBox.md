@@ -49,9 +49,9 @@ public class IntToBoolConverter : IValueConverter
 
 - 使用例
 ```
-<UserControl.Resources>
-    <converter:IntToBoolConverter x:Key="IntToBool"/>
-</UserControl.Resources>
+    <UserControl.Resources>
+        <converter:IntToBoolConverter x:Key="IntToBool"/>
+    </UserControl.Resources>
 
-<CheckBox IsChecked="{Binding Path=IntProperty, Converter={StaticResource IntToBool}}"/>
+    <CheckBox IsChecked="{Binding Path=IntProperty, Converter={StaticResource IntToBool}}"/>
 ```
