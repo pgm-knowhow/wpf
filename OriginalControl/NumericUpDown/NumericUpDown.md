@@ -412,6 +412,7 @@ namespace Common.usercontrol.src
 ```
 
 - ViewModel
+
 ```
 public ObservableCollection<string> NumericUpDown1 { get; set; } = new ObservableCollection<string>() { "0", "1" };
 public string SelectedValue { get; set; } = "0";
