@@ -1,9 +1,9 @@
 # WPF開発ノウハウ集
 [https://github.com/tanno-seiichi/wpf](https://github.com/tanno-seiichi/wpf)
 
-#### WPF初歩
+#### 基本
 1. [新規プロジェクトの作成](./StartUp/1.Project.md)
-2. [デバッグの開始](./StartUp/2.Debug.md)
+2. [デバッグの実行](./StartUp/2.Debug.md)
 3. [文字の表示](./StartUp/3.Label.md)
 4. [Binding(表示)](./StartUp/4.Binding_get.md)
 5. [Binding(入力)](./StartUp/5.Binding_set.md)
