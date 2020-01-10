@@ -45,6 +45,8 @@
 3. [定義ファイルを作成する](./Logging/Log4Net/3.log4net.config.md)
 4. [ログを出力する](./Logging/Log4Net/4.logging.md)
 5. [ログを暗号化／複合化する](./Logging/Log4Net/5.Encrypt.md)
+#### 外部アセンブリ
+1. [外部アセンブリを動的に読み込む](./LoadAssembly/LoadAssembly.md)
 #### Tips
 1. [CheckBox](./Tips/CheckBox.md)
 2. [Database](./Tips/Database.md)
