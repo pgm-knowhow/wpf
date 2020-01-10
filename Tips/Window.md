@@ -7,17 +7,21 @@
 
 下の関数をコンストラクタでWindow表示後に実行
 ```
-private void AdjustWindowPosition() {
+private void AdjustWindowPosition() 
+{
     bool isMainWindowVisible = false;
 
-    foreach( System.Windows.Forms.Screen display in System.Windows.Forms.Screen.AllScreens ) {
-        if( display.WorkingArea.Contains( (int)this.Left, (int)this.Top ) ) {
+    foreach( System.Windows.Forms.Screen display in System.Windows.Forms.Screen.AllScreens ) 
+    {
+        if( display.WorkingArea.Contains( (int)this.Left, (int)this.Top ) ) 
+        {
             isMainWindowVisible = true;
             break;
         }
     }
 
-    if( !isMainWindowVisible ) {
+    if( !isMainWindowVisible ) 
+    {
         this.Top = 0;
         this.Left = 0;
     }
