@@ -5,51 +5,51 @@
 
 
 - 外部アセンブリから特定の親クラスを継承したクラスを取得する場合
-```
-using System.Reflection; /* Assemblyを使用するために記述 */
+    ```
+    using System.Reflection; /* Assemblyを使用するために記述 */
 
-Type getInheritance( string filePath )
-{
-    Assembly dll = Assembly.LoadFrom( filePath );
-    foreach( Type type in dll.GetTypes() )
+    Type getInheritance( string filePath )
     {
-        if( type.IsClass )
+        Assembly dll = Assembly.LoadFrom( filePath );
+        foreach( Type type in dll.GetTypes() )
         {
-            if( type.IsSubclassOf( typeof( <親クラス> ) ) )
+            if( type.IsClass )
             {
-                return type;
+                if( type.IsSubclassOf( typeof( <親クラス> ) ) )
+                {
+                    return type;
+                }
             }
         }
+        return null;
     }
-    return null;
-}
-```
+    ```
 
 - 外部アセンブリから特定のインターフェースを実装したクラスを取得する場合
-```
-using System.Reflection; /* Assemblyを使用するために記述 */
+    ```
+    using System.Reflection; /* Assemblyを使用するために記述 */
 
-Type getImplement( string filePath )
-{
-    Assembly dll = Assembly.LoadFrom( string filePath );
-    foreach( Type type in dll.GetTypes() )
+    Type getImplement( string filePath )
     {
-        if( type.IsClass )
+        Assembly dll = Assembly.LoadFrom( string filePath );
+        foreach( Type type in dll.GetTypes() )
         {
-            if( type.GetInterface( typeof( <インターフェース> ).FullName ) != null )
+            if( type.IsClass )
             {
-                return type;
+                if( type.GetInterface( typeof( <インターフェース> ).FullName ) != null )
+                {
+                    return type;
+                }
             }
         }
+        return null;
     }
-    return null;
-}
-```
+    ```
 
 - 取得したクラスのインスタンスを生成する
-```
-object getInstance( Type type )
-{
-    return Activator.CreateInstance( type );
-}
-```
+    ```
+    object getInstance( Type type )
+    {
+        return Activator.CreateInstance( type );
+    }
+    ```
