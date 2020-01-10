@@ -16,4 +16,4 @@ Application.Current.Dispatcher.BeginInvoke(
 );
 ```
  DispatcherPriorityには実行優先度によっていくつか選択肢がある
- （よく見るのは Normal と BackGround）
+ [（よく使うのは Normal と BackGround）](https://docs.microsoft.com/dotnet/api/system.windows.threading.dispatcherpriority)

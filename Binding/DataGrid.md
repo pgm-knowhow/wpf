@@ -31,16 +31,21 @@
     - DataGridには先頭セルに1～99を設定した行を99行設定
 
     ```
-    public ObservableCollection<Row> DataGrid1 { get; } = new ObservableCollection<Row>();
-    public static ObservableCollection<string> ComboBox1 { get; } = new ObservableCollection<string>()
+    using System.Collections.ObjectModel; /* ObservableCollection<T>を使うために記述 */
+
+    class ViewModel
     {
-        "Item.1", "Item.2", "Item.3"
-    };
-    public ViewModel()
-    {
-        for( int i = 1; i < 100; i++ )
+        public ObservableCollection<Row> DataGrid1 { get; } = new ObservableCollection<Row>();
+        public static ObservableCollection<string> ComboBox1 { get; } = new ObservableCollection<string>()
         {
-            this.DataGrid1.Add( new Row() { LabelColumn = i } );
-        }        
+            "Item.1", "Item.2", "Item.3"
+        };
+        public ViewModel()
+        {
+            for( int i = 1; i < 100; i++ )
+            {
+                this.DataGrid1.Add( new Row() { LabelColumn = i } );
+            }        
+        }
     }
     ```

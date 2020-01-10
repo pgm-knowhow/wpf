@@ -16,8 +16,13 @@
 
 - ViewModel
     ```
-    public ObservableCollection<int> ComboBox1 { get; set; } = new ObservableCollection<int>() { 1, 2 };
-    public int SelectedIndex1 { get; set; } = 0;
+    using System.Collections.ObjectModel; /* ObservableCollection<T>を使うために記述 */
+
+    class ViewModel
+    {
+        public ObservableCollection<int> ComboBox1 { get; set; } = new ObservableCollection<int>() { 1, 2 };
+        public int SelectedIndex1 { get; set; } = 0;
+    }
     ```
 
 ## Binding Dictionary
@@ -30,11 +35,16 @@
 
 - ViewModel
     ```
-    public Dictionary<int, string> ComboBox1 { get; set; } = new Dictionary<int, string>() 
-    { 
-        { 1, "str1" }, 
-        { 2, "str2" } 
-    };
-    public int SelectedValue1 { get; set; } = 1;
+    using System.Collections.Generic; /* Dictionary<TKey,TValue>を使うために記述 */
+
+    class ViewModel
+    {
+        public Dictionary<int, string> ComboBox1 { get; set; } = new Dictionary<int, string>() 
+        { 
+            { 1, "str1" }, 
+            { 2, "str2" } 
+        };
+        public int SelectedValue1 { get; set; } = 1;
+    }
     ```
 
