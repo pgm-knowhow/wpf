@@ -1,4 +1,5 @@
 # WPF開発ノウハウ集
+[https://github.com/tanno-seiichi/wpf](https://github.com/tanno-seiichi/wpf)
 
 #### WPF初歩
 1. [新規プロジェクトの作成](./StartUp/1.Project.md)
@@ -51,6 +52,3 @@
 4. [ObservableCollection](./Tips/ObservableCollection.md)
 5. [ScrollViewer](./Tips/ScrollViewer.md)
 6. [Window](./Tips/Window.md)
-
-
-[https://github.com/tanno-seiichi/wpf](https://github.com/tanno-seiichi/wpf)
