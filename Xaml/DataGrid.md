@@ -8,7 +8,7 @@
 ```
 
 - ItemsSourceにBindされたコレクションが行として表示される
-    （Bindingについては [Binding(DataGrid)の実装](../Binding/DataGrid.md) の項を参照）
+    - ( Bindingについては [Binding(DataGrid)の実装](../Binding/DataGrid.md) の項を参照 )
 - 列ヘッダには Bind したクラスのプロパティ名が表示される
 - 各セルは TextBox、プロパティが bool型の場合は CheckBox で表示される
 
