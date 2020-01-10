@@ -26,15 +26,15 @@ SQL問合せではSQLステートメントの実行時間以上に接続・切�
 
 ## DB切断を確実に完了したい時（System.Data.SQLite）
 
-System.Data.Sqlite.SQLiteConnection.Close()を実行しても、その後ガベージコレクションが実行されるまでデータベースのインスタンスは開放されない
+System.Data.Sqlite.SQLiteConnection.Close()を実行しても、その後ガベージコレクションが実行されるまでデータベースのインスタンスは開放されない<br/>
 プログラム・プロセスからDBファイルを開放したい（削除、置換したい時等）場合は、切断後にガベージコレクションを手動で呼出す必要がある
 
 - 例
 ```
-conn.Close();
+    conn.Close();
 
-GC.Collect();
-GC.WaitForPendingFinalizers();
+    GC.Collect();
+    GC.WaitForPendingFinalizers();
 
-File.Delete( "<DBファイルパス>" );
+    File.Delete( "<DBファイルパス>" );
 ```
