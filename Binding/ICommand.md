@@ -168,15 +168,17 @@ ICommandの実装例は下記のとおり
 ## ICommandの使用例
 
 - Xaml
+
 ```
-<ContextMenuService.ContextMenu>
-    <ContextMenu Name="contextMenu">
-        <MenuItem Name="AddMenu" Header="Add" Command="{Binding Path=AddCommand}"/>
-    </ContextMenu>
-</ContextMenuService.ContextMenu>
+	<ContextMenuService.ContextMenu>
+		<ContextMenu Name="contextMenu">
+			<MenuItem Name="AddMenu" Header="Add" Command="{Binding Path=AddCommand}"/>
+		</ContextMenu>
+	</ContextMenuService.ContextMenu>
 ```
 
 - Xaml.cs
+
 コンストラクタの中等に実装して画面の要素をViewModelに渡す引数を登録する
 ViewModelに引数を渡す必要がない場合は省略可
 ```
@@ -184,15 +186,16 @@ this.AddMenu.CommandParameter = this.dataGrid;
 ```
 
 - ViewModel
+
 ```
-public ICommand AddCommand => new RelayCommand<DataGrid>( this.AddProcess, this.IsAddExecutable );
-private void AddProcess( DataGrid dataGrid )
-{
-    〜ここに処理を実装〜
-}
-private bool IsAddExecutable( DataGrid dataGrid )
-{
-    〜ここに処理の実行可否を返す処理を実装〜
-    （falseを返した場合Buttonコントロール、ContextMenuは非活性として表示される）
-}
+	public ICommand AddCommand => new RelayCommand<DataGrid>( this.AddProcess, this.IsAddExecutable );
+	private void AddProcess( DataGrid dataGrid )
+	{
+		〜ここに処理を実装〜
+	}
+	private bool IsAddExecutable( DataGrid dataGrid )
+	{
+		〜ここに処理の実行可否を返す処理を実装〜
+		（falseを返した場合Buttonコントロール、ContextMenuは非活性として表示される）
+	}
 ```
