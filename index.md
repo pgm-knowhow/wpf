@@ -5,6 +5,7 @@
 3. [文字の表示](./StartUp/3.Label.md)
 4. [Binding(表示)](./StartUp/4.Binding_get.md)
 5. [Binding(入力)](./StartUp/5.Binding_set.md)
+6. [Binding(更新)](./StartUp/6.Binding_reload.md)
 #### Xaml の実装
 1. [Label](./Xaml/Label.md)
 2. [TextBox](./Xaml/TextBox.md)
