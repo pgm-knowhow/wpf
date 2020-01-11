@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../index.md)
 # Xaml(ContextMenu)の実装
 
 - Xaml

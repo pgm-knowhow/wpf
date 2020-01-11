@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../index.md)
 # Tips(ObservableCollection)
 
 - ObservableCollectionに要素をAdd/DeleteするとINotifyPropertyChangedを使わなくても画面に反映される

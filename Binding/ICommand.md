@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../index.md)
 # Binding(ICommand)の実装
 
 - ICommandはButtonコントロール、ContextMenuのBinding先として実装する

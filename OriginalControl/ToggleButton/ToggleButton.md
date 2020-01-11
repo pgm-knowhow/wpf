@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../../index.md)
 # ToggleButtonを実装する
 
 CheckBoxの代替としてのToggleButton

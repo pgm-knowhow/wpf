@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../../index.md)
 # Windowのタイトルバーにヘルプアイコンを実装する
 
 ![TitleBarHelpIcon.jpg](./TitleBarHelpIcon.jpg)

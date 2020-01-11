@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../index.md)
 # Binding(TextBox)の実装
 
 - Xaml

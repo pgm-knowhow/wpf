@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../index.md)
 # Xaml(DataGrid)の実装
 
 #### 基本

@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../index.md)
 # Xaml(Grid)の実装
 
 2列x3行のグリッド

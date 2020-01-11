@@ -1,4 +1,3 @@
-[WPF開発ノウハウ集](../index.md)
 # Tips(CheckBox)
 
 ## CheckBoxにint型のプロパティをBindする
