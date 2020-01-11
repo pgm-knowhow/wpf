@@ -1,3 +1,4 @@
+[WPF開発ノウハウ集](../index.md)
 # Binding(Label)の実装
 
 - Xaml
