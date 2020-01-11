@@ -182,7 +182,7 @@ ICommandの実装例は下記のとおり
 コンストラクタの中等に実装して画面の要素をViewModelに渡す引数を登録する
 ViewModelに引数を渡す必要がない場合は省略可
 ```
-this.AddMenu.CommandParameter = this.dataGrid;
+	this.AddMenu.CommandParameter = this.dataGrid;
 ```
 
 - ViewModel
