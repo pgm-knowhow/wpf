@@ -29,8 +29,8 @@ WidthとHeightをAutoに設定しておくと、表示時にグリッド各セ�
 
 - 隣の列、隣の行との結合
 ```
-<Label Grid.Column="0" Grid.Row="0" Content="a1"
-       Grid.ColumnSpan="2" Grid.RowSpan="2">
+    <Label Grid.Column="0" Grid.Row="0" Content="a1"
+        Grid.ColumnSpan="2" Grid.RowSpan="2">
 ```
 
 - メモ
