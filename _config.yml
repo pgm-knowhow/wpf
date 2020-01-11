@@ -1,3 +1,5 @@
 encoding: utf-8
 charset: ja
 title: WPF開発ノウハウ集
+
+theme: jekyll-theme-cayman
