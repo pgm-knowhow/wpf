@@ -46,6 +46,8 @@
 5. [ログを暗号化／複合化する](./Logging/Log4Net/5.Encrypt.md)
 #### 外部アセンブリ
 1. [外部アセンブリを動的に読み込む](./LoadAssembly/LoadAssembly.md)
+#### WinForms組込
+1. [WinFormsコントロールを表示する](./WinForms/WindowsFormsHost.md)
 #### Tips
 1. [CheckBoxにintをbindする(IValueConverterの実装)](./Tips/CheckBox.md)
 2. [Databaseの接続／切断時の注意](./Tips/Database.md)
