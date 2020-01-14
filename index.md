@@ -47,12 +47,12 @@
 #### 外部アセンブリ
 1. [外部アセンブリを動的に読み込む](./LoadAssembly/LoadAssembly.md)
 #### Tips
-1. [CheckBox](./Tips/CheckBox.md)
-2. [Database](./Tips/Database.md)
-3. [Label](./Tips/Label.md)
-4. [ObservableCollection](./Tips/ObservableCollection.md)
-5. [ScrollViewer](./Tips/ScrollViewer.md)
-6. [Window](./Tips/Window.md)
+1. [CheckBoxにintをbindする(IValueConverterの実装)](./Tips/CheckBox.md)
+2. [Databaseの接続／切断時の注意](./Tips/Database.md)
+3. [Labelに'_'を表示する](./Tips/Label.md)
+4. [ObservableCollection操作時の注意](./Tips/ObservableCollection.md)
+5. [ControlからScrollViewerを取得する](./Tips/ScrollViewer.md)
+6. [表示領域外で起動したWindowの位置補正](./Tips/Window.md)
 
 <br/>
 

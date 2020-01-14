@@ -1,6 +1,8 @@
 [WPF開発ノウハウ集](../index.md)
 # Tips(ObservableCollection)
 
+## ObservableCollection操作時の注意
+
 - ObservableCollectionに要素をAdd/DeleteするとINotifyPropertyChangedを使わなくても画面に反映される
 - その代わりObservableCollectionはメインスレッド（UIスレッド）以外のスレッドから操作しようとすると例外になってしまう
 - 以下のように実装することでメインスレッド以外のスレッド
