@@ -1,7 +1,8 @@
 # WPFの画面にWinFormsのコントロールを組込んで表示する
 
-#### (メリット) DataGridView等、多機能かつ高速なWinForms用のControlを使う
-#### (デメリット) WPFに組込んだWinFormsのControlは画面動作がスムーズでない傾向がある
+#### メリット／デメリット
+- DataGridView等、多機能かつ高速なWinForms用のControlを利用できる (メリット）
+- WPFに組込んだWinFormsのControlは画面動作がスムーズでない傾向がある（デメリット）
 
 <br/>
 
