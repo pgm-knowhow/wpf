@@ -38,7 +38,6 @@
 6. デバッグ実行してWinFormsで作ったUserControlが表示されれば成功
 ![WindowsFormsHost3.jpg](./WindowsFormsHost3.jpg)
 
-<br/>
 
 参考： UserContorlの代わりにSystem.Windows.Forms.Labelを直接組込む場合
 ```
