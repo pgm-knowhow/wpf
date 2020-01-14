@@ -1,11 +1,11 @@
 [WPF開発ノウハウ集](../index.md)
-# WPFの画面にWinFormsのコントロールを組込んで表示する
+# WPFアプリでWinFormsコントロールを使う
 
 #### メリット／デメリット
 - DataGridView等、多機能かつ高速なWinForms用のControlを利用できる (メリット）
 - WPFに組込んだWinFormsのControlは画面動作がスムーズでない傾向がある（デメリット）
 
-<br/>
+#### WinFormsコントロールの組込手順
 
 1. アセンブリ参照に `System.Windows.Forms` を追加
 2. ソリューションエクスプローラーのContextMenu＞追加＞新しい項目を選択
