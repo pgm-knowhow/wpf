@@ -205,14 +205,20 @@ namespace Common.usercontrol.src
                 this.border.Background = Brushes.PaleGreen;
                 this.btnOn.Visibility = Visibility.Collapsed;
                 this.btnOff.Visibility = Visibility.Visible;
-                this.btnOff.Focus();
+				if( this.btnOn.IsFocused ) 
+                {
+	                this.btnOff.Focus();
+				}
             }
             else
             {
                 this.border.Background = Brushes.WhiteSmoke;
                 this.btnOff.Visibility = Visibility.Collapsed;
                 this.btnOn.Visibility = Visibility.Visible;
-                this.btnOn.Focus();
+				if( this.btnOff.IsFocused ) 
+                {
+	                this.btnOn.Focus();
+				}
             }
         }
 
